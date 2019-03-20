@@ -43,10 +43,19 @@ a:hover, a:visited, a:link, a:active
   transition: 0.2s;
 }
 
-.gallery-spacing{
-  padding-left: 0px;
-  padding-right: 0px;
+.slider-image{
+  max-width: 100%;
+  height: auto;
 }
+
+.text-grey{
+  color: #6C6D71;
+}
+
+.text-lighter-grey{
+  color: #808183;
+}
+
 
 
 
