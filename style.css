@@ -56,6 +56,15 @@ a:hover, a:visited, a:link, a:active
   color: #808183;
 }
 
+.form-style{
+  width: 80%;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.carousel-control-next, .carousel-control-prev{
+  top: 40px;
+}
+
 
 
 

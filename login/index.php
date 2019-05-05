@@ -321,7 +321,7 @@ body, html {
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form id="contact-form" class="form-style" name="contact-form" action="mail.php" method="POST">
 
                 <!--Grid row-->
                 <div class="row">
@@ -373,12 +373,12 @@ body, html {
                 </div>
                 <!--Grid row-->
 
+                <div class="text-center text-md-left mt-3">
+                  <a class="w3-button w3-light-grey w3-block" onclick="document.getElementById('contact-form').submit();">Send</a>
+                </div>
+                <div class="status"></div>
             </form>
 
-            <div class="text-center text-md-left mt-3">
-                <a class="w3-button w3-light-grey w3-block" onclick="document.getElementById('contact-form').submit();">Send</a>
-            </div>
-            <div class="status"></div>
         </div>
         <!--Grid column-->
 
