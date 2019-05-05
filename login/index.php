@@ -309,7 +309,7 @@ body, html {
 <!-- Contact Section -->
 
 <!--Section: Contact v.2-->
-<section class="mb-5 container mt-4">
+<section class="mb-5 container mt-4" id="contact">
 
     <!--Section heading-->
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>

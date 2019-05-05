@@ -65,6 +65,14 @@ a:hover, a:visited, a:link, a:active
   top: 40px;
 }
 
+.profile_info{
+  text-align: center;
+}
+
+.panel-style{
+  border: none;
+}
+
 
 
 

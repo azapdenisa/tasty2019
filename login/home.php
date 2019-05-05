@@ -108,10 +108,10 @@ if (isset($_GET['logout'])) {
 
 
 <div style="padding-top: 64px;">
-	<div class="header">
+	<div class="header panel-style">
 		<h2>Admin - Home Page</h2>
 	</div>
-	<div class="content">
+	<div class="content panel-style">
 		<!-- notification message -->
 		<?php if (isset($_SESSION['success'])) : ?>
 			<div class="error success" >
@@ -135,7 +135,7 @@ if (isset($_GET['logout'])) {
 
 					<small>
 						<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i>
-						<br><br> <a href="home.php?logout='1'" style="color: red;" class="btn">logout</a>
+						<br><br> <a href="home.php?logout='1'" class="btn">logout</a>
 						<br><br> <a href="../recipes/view_users.php" class="btn"> + manage users</a>
 						<br><br> <a href="../recipes/view_recipes.php" class="btn"> + manage recipes</a>
 
