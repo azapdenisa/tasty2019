@@ -33,7 +33,7 @@ body, html {
 }
 </style>
 </head>
-<body style="background-image:url(../images/bgimg1.jpg); background-size: cover; background-attachment: fixed;">
+<body style="background-image:url(../images/food-layout.jpg); background-size: cover; background-attachment: fixed;">
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
@@ -50,22 +50,22 @@ body, html {
 	            <?php  if (isset($_SESSION['user'])) : ?>
 					      <strong><?php echo $_SESSION['user']['username']; ?></strong>
 					        <small>
-						        <i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+						        <i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i>
 					        </small>
-					    <?php endif ?> 
-	 
+					    <?php endif ?>
+
                Logout</a></button>
-            
+
           </div>
           <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-      
+
           <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
             <i class="fa fa-bars"></i>
           </a>
         </div>
       </div>
 
-      
+
       <!-- Sidebar on small screens when clicking the menu icon -->
       <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
@@ -77,35 +77,35 @@ body, html {
         <?php if (isAdmin()==true) : ?>
         <a href="../login/home.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-clipboard-list"></i> ADMIN MENU</a>
         <?php endif ?>
-      
+
         <a href="index.php?logout='1'"><button type="submit" class="w3-bar-item w3-button" name="logout_btn">
           <i class="fas fa-user-circle"></i>
 	          <?php  if (isset($_SESSION['user'])) : ?>
 				    	<strong><?php echo $_SESSION['user']['username']; ?></strong>
 					    <small>
-					    	<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+					    	<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i>
 					    </small>
-				    	<?php endif ?> 
-	 
+				    	<?php endif ?>
+
 	           Logout</button></a>
-        
+
         </nav>
 
 
 <div style="padding-top: 64px;">
-<div class="header">
+<div class="header panel-style">
 		<h2>Edit current recipe data</h2>
 	</div>
-    
-	<form method="post" action='edit_recipe_query.php'>
 
-    <?php echo display_error(); 
+	<form method="post" action='edit_recipe_query.php' class="panel-style">
+
+    <?php echo display_error();
     $idToEdit = $_POST['id'];
     $query="SELECT * FROM recipes WHERE id = '$idToEdit'";
     mysqli_query($db, $query);
     $result = mysqli_query($db, $query);
     $row = mysqli_fetch_assoc($result);
-    
+
     ?>
 
 		<div class="input-group">
@@ -130,12 +130,12 @@ body, html {
 		</div>
 		<div class="input-group">
           <input type="hidden" name="id" id="id" value="<?php echo $idToEdit ?>">
-          <button type="submit" class="btn" name="edit_recipe_btn">Update recipe</button> 
-                             
+          <button type="submit" class="btn" name="edit_recipe_btn">Update recipe</button>
+
 		</div>
-		
+
   </form>
-  
+
   </div>
 </body>
 </html>

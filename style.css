@@ -70,9 +70,18 @@ a:hover, a:visited, a:link, a:active
 }
 
 .panel-style{
-  border: none;
+  border: none !important;
 }
 
+.add-button{
+  text-align: center;
+  padding-bottom: 0px !important;
+}
+
+.add-button a{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
 
 
 

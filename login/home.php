@@ -48,7 +48,7 @@ if (isset($_GET['logout'])) {
     }
 	</style>
 </head>
-<body style="background-image:url(../images/bgimg1.jpg); background-size: cover; background-attachment: fixed;">
+<body style="background-image:url(../images/food-layout.jpg); background-size: cover; background-attachment: fixed;">
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">

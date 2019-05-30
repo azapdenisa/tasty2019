@@ -1,4 +1,4 @@
-<?php include('../login/functions.php') 
+<?php include('../login/functions.php')
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
         body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-		
+
 		button[name=remove_btn] {
 			background: #003366;
         }
@@ -35,7 +35,7 @@
 		}
 	</style>
 </head>
-<body style="background-image:url(../images/bgimg1.jpg); background-size: cover; background-attachment: fixed;">
+<body style="background-image:url(../images/food-layout.jpg); background-size: cover; background-attachment: fixed;">
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
@@ -52,22 +52,22 @@
 	            <?php  if (isset($_SESSION['user'])) : ?>
 					      <strong><?php echo $_SESSION['user']['username']; ?></strong>
 					        <small>
-						        <i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+						        <i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i>
 					        </small>
-					    <?php endif ?> 
-	 
+					    <?php endif ?>
+
                Logout</a></button>
-            
+
           </div>
           <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-      
+
           <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
             <i class="fa fa-bars"></i>
           </a>
         </div>
       </div>
 
-      
+
       <!-- Sidebar on small screens when clicking the menu icon -->
       <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
@@ -79,21 +79,21 @@
         <?php if (isAdmin()==true) : ?>
         <a href="../login/home.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-clipboard-list"></i> ADMIN MENU</a>
         <?php endif ?>
-      
+
         <a href="index.php?logout='1'"><button type="submit" class="w3-bar-item w3-button" name="logout_btn">
           <i class="fas fa-user-circle"></i>
 	          <?php  if (isset($_SESSION['user'])) : ?>
 				    	<strong><?php echo $_SESSION['user']['username']; ?></strong>
 					    <small>
-					    	<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+					    	<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i>
 					    </small>
-				    	<?php endif ?> 
-	 
+				    	<?php endif ?>
+
 	           Logout</button></a>
-        
+
         </nav>
 
-<div class="w3-container" style="padding-top: 75px; padding-left: 50px">
+<div class="w3-container add-button" >
         <a href="../login/create_user.php" class="btn btn-success"> + add new user</a>
 </div>
 <div class="w3-container w3-center" style="padding-top: 20px" >
@@ -118,7 +118,7 @@
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
                 echo
-                
+
                 "<tr>
                     <td>{$row['id']}</td>
                     <td>{$row['username']}</td>
@@ -130,24 +130,24 @@
                         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                         <button type="submit" class="btn btn-outline-info"  >
                         <i class="far fa-edit"></i>
-                    </button> 
+                    </button>
                     </td>
-                    </form>                
+                    </form>
                     <form method="post" action='delete_user.php?id="<?php echo $row['id'];?>"'>
                     <td class="user-delete">
                         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                         <button type="submit" class="btn btn-outline-danger"  >
                             <i class="far fa-trash-alt"></i>
-                    </button> 
+                    </button>
                     </td>
-                    </form>                
+                    </form>
                     <?php
                 "</tr>";
             }
             ?>
         </tbody>
     </table>
-    
+
 </div>
 </body>
 </html>
